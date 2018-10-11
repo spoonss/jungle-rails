@@ -6,12 +6,16 @@
     <th></th>
   </tr>
  
-  <% @category.each do |c| %>
+  <table class="table table-bordered">
+  <thead>
     <tr>
-      <td><%= c.name %></td>
+      <th colspan="2">Name</th>
     </tr>
-  <% end %>
-
+  </thead>
+  <tbody>
+    <%= render @category %>
+  </tbody>
+</table>
   
     <%= link_to '+ New Category', new_admin_category_path, class: 'btn btn-info' %>
   
